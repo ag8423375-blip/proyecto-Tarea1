@@ -4,7 +4,7 @@ public class Vehiculo
     public String modelo;
     public int velocidad;
 
-    public vehiculo(String marca, String modelo, int velocidad)
+    public Vehiculo(String marca, String modelo, int velocidad)
     {
         this.marca = marca;
         this.modelo = modelo;

@@ -104,7 +104,7 @@ public class Main
                     System.out.println("Modelo");
                     String modelo = teclado.nextLine();
                      
-                    Vehiculo v1 = new Vehiculo(marca,velocidad,modelo);
+                    Vehiculo v1 = new Vehiculo(marca,modelo,velocidad);
 
                     System.out.println("Datos del Vehiculos:");
                     System.out.println("Marca:" + v1.getMarca());
@@ -130,7 +130,7 @@ public class Main
                     int cilindrada = teclado.nextInt();
                     teclado.nextLine();
 
-                    Moto m1 = new Moto( casco,cilindrada,marca, modelo);
+                    Motor m1 = new Motor( casco,cilindrada,marca, modelo,velocidad);
                     
                      System.out.println("Casco:" + m1.getCasco());
                      System.out.println("Cilindrada:" + m1.getCilindrada());
@@ -266,23 +266,27 @@ public class Main
         }
 
         public static void contadorVocales() {
+           System.out.println("Escribe alguna frase o texto:");
 
-            System.out.println("Escribe alguna frase o texto:");
-            teclado.nextLine();
             String texto = teclado.nextLine();
-            texto = texto.toLowerCase();
+             texto = texto.toLowerCase();
 
             int vocales = 0;
 
-           for(int i = 0; i < texto.length(); i++)
-           {
-                if (texto.charAt(i) == 'a' || texto.charAt(i) == 'e' || texto.charAt(i) == 'i' || texto.charAt(i) == 'o' || texto.charAt(i) == 'u' )
-                {
-                     vocales++;
-                }
-           }
-           System.out.println("La cantidad de vocales es:" + vocales);
-          
+             for(int i = 0; i < texto.length(); i++)
+              {
+             if (texto.charAt(i) == 'a' ||
+              texto.charAt(i) == 'e' ||
+              texto.charAt(i) == 'i' ||
+               texto.charAt(i) == 'o' ||
+                texto.charAt(i) == 'u')
+             {
+            vocales++;
+            }
+          }
+
+            System.out.println("La cantidad de vocales es: " + vocales);
+            
         }
 
         public static void promedioNotas()

@@ -3,9 +3,9 @@ public class Motor extends Vehiculo
     public boolean casco;
     public int cilindrada;
 
-    public Motor(boolean casco, int cilindrada,String marca, String modelo)
+    public Motor(boolean casco, int cilindrada,String marca, String modelo, int velocidad)
     {
-        super(marca,modelo);
+        super(marca,modelo,velocidad);
         this.casco = casco;
         this.cilindrada = cilindrada; 
     }
